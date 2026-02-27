@@ -58,5 +58,16 @@ class MyCatalog extends StatelessWidget {
       'Ayam Bakar',
       'Kopi Hitam',
     ];
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Katalog Makanan'),
+        actions: [
+          IconButton(
+            icon: const,
+          )
+        ],
+      ),
+    )
   }
 }
