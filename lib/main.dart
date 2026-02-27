@@ -81,3 +81,15 @@ class MyCatalog extends StatelessWidget {
     );
   }
 }
+
+//Tombol untuk menambahkan item (Menggunakan Provider)
+class AddButton extends StatelessWidget {
+  final String item;
+
+  const AddButton({required this.item, super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
