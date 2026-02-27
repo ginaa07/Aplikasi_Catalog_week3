@@ -64,7 +64,10 @@ class MyCatalog extends StatelessWidget {
         title: const Text('Katalog Makanan'),
         actions: [
           IconButton(
-            icon: const,
+            icon: const Icon(Icons.shopping_cart),
+            onPressed: () {
+              Navigator.pushNamed(context, '/cart'); 
+            },
           )
         ],
       ),
