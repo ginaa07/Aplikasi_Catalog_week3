@@ -65,12 +65,19 @@ class MyCatalog extends StatelessWidget {
         actions: [
           IconButton(
             icon: const Icon(Icons.shopping_cart),
-            onPressed: () {
-              Navigator.pushNamed(context, '/cart'); 
-            },
-          )
+            onPressed: () => Navigator.pushNamed(context, '/cart'); 
+          ),
         ],
       ),
-    )
+      body: ListView.builder(
+        itemCount: products.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(products[index]),
+            trailing: AddButton(item: products[index]),
+          );
+        }
+      ),
+    );
   }
 }
