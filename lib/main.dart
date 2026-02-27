@@ -121,7 +121,8 @@ class MyCart extends StatelessWidget {
           Expanded(
             child: ListView.builder(
               itemCount: cart.items.length,
-              itemBuilder: (context, index) => ListTile(
+              itemBuilder: (context, index) => 
+              ListTile(
                 leading: const Icon(Icons.fastfood),
                 title: Text(cart.items[index])),
             ),
@@ -129,7 +130,13 @@ class MyCart extends StatelessWidget {
           const Divider(),
           Padding(
             padding: const EdgeInsets.all(20),
-            
+            child: ElevatedButton(
+              onPressed: () => cart.removeAll(),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red),
+                child: const Text('Hapus Keranjang', style: TextStyle(color: Colors.white)),
+            ),
+          ),
         ],
       ),
     );
