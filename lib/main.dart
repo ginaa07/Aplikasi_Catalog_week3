@@ -82,7 +82,7 @@ class MyCatalog extends StatelessWidget {
   }
 }
 
-//Tombol untuk menambahkan item (Menggunakan Provider)
+//Widget Tombol untuk menambahkan item (Menggunakan Provider)
 class AddButton extends StatelessWidget {
   final String item;
 
@@ -90,6 +90,8 @@ class AddButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    final iscart =context.select<CartModel, bool>((cart) => cart.items.contains(item));
+
+    return TextButton();
   }
 }
