@@ -43,3 +43,20 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+//Halaman Catalog
+class MyCatalog extends StatelessWidget {
+  const MyCatalog({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final products = [
+      'Nasi Goreng',
+      'Mie Goreng',
+      'Sate Ayam',
+      'Es Teh Manis',
+      'Ayam Bakar',
+      'Kopi Hitam',
+    ];
+  }
+}
