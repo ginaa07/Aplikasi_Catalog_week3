@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    //Membungkus aplikasi dengan ChangeNotifierProvider 
+    ChangeNotifierProvider(
+      create: (context) => CartModel(), //Membuat instance CounterProvider
+      child: const MyApp(), 
+    ),
+  );
 }
+
+
+
+
+
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
