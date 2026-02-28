@@ -16,7 +16,7 @@ class CartModel extends ChangeNotifier {
   final List<String> _items = [];
 
   List<String> get items => _items;
-  void addItem(String itemName) {
+  void add(String itemName) {
     _items.add(itemName);
     notifyListeners();
   }
@@ -98,7 +98,7 @@ class AddButton extends StatelessWidget {
       onPressed: isIncart
           ? null
           : () {
-              context.read<CartModel>().addItem(item);
+              context.read<CartModel>().add(item);
             },
       child: isIncart
           ? const Icon(Icons.check, color: Colors.green)
