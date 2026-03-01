@@ -19,7 +19,7 @@ Widget build(BuildContext context) {
         actions: [
           IconButton(
             icon: const Icon(Icons.shopping_cart),
-            onPressed: () => Navigator.pushNamed(context, '/cart'),
+            onPressed: () => Navigator.pushNamed(context, AppRouter.cart),
           ),
         ],
       ),
