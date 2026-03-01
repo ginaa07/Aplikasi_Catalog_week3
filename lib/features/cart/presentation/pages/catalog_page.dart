@@ -1,3 +1,5 @@
+import 'package:aplikasicatalog/core/routes/app_router.dart';
+import 'package:aplikasicatalog/features/cart/presentation/widgets/add_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:aplikasicatalog/features/cart/domain/entities/product.dart';
 
@@ -27,7 +29,6 @@ class CatalogPage extends StatelessWidget {
         itemCount: _products.length,
         itemBuilder: (context, index) => ListTile(
           title: Text(_products[index].name),
-          
           subtitle: Text('Rp ${_products[index].price}'),
           trailing: AddButtonWidget(product: _products[index]),
         ),
