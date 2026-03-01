@@ -15,3 +15,11 @@ class CartPage extends StatelessWidget {
         children: [
           Expanded(
             child: ListView.builder(
+              itemCount: cart.items.length,
+              itemBuilder: (context, index) => ListTile(
+                leading: const Icon(Icons.fastfood),
+                title: Text(cart.items[index].name),
+                subtitle: Text('Rp ${cart.items[index].price}'),
+              ),
+            ),
+          ),
